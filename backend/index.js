@@ -1,17 +1,30 @@
-const express = require('express');
-// const cors = require('cors');
-const mongoose  = require('mongoose');
-const jwt = require('jsonwebtoken');
+import express from "express";
+import connectDB from "./db/DB.js"; // Importing the database connection function
+import authRoutes from "./routes/authRoutes.js";
+import cors from "cors";
+import dotenv from "dotenv"; // Import dotenv for environment variables
 
-const secret = 'jhbzmgtw';
+dotenv.config(); // Load environment variables from a .env file into process.env
 
-const app = express ();
-// app.use(cors());
+const app = express();
+
+// Middleware
+app.use(cors());
 app.use(express.json());
 
-mongoose.connect('mongodb://127.0.0.1:27017/');
+// Connect to the database
+connectDB();
 
+// Routes
+app.use("/api", authRoutes);
 
-app.listen(8800, (req,res)=>{
-    console.log("Database connected successfully!!!! ");
+// Test route
+app.get("/", (req, res) => {
+  res.send("<h1>Welcome to ecommerce app</h1>");
+});
+
+// Start the server
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
