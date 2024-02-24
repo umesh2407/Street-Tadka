@@ -51,7 +51,7 @@
     flex-direction: column;
 }
 
-.phoneInp,
+.emailInp,
 .btn {
     padding: 15px;
     border-radius: 5px;
@@ -62,10 +62,16 @@
 
 .btn {
     margin: 10px 0;
-    background-color: rgb(156, 156, 156);
+    background-color: rgb(7, 39, 222);
     color: white;
     font-weight: 500;
     cursor: pointer;
+    transition: 0.3s all linear;
+}
+
+.btn:hover{
+    background-color: rgb(11, 11, 205);
+    transform: scale(1.02);
 }
 
 .Sbtn{
@@ -97,7 +103,7 @@
     margin: 0 10px;
 }
 
-.socialSignupBox {
+/* .socialSignupBox {
     padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
@@ -107,7 +113,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-}
+} */
 
 .icon {
     width: 35px;
@@ -133,6 +139,7 @@
     text-decoration: none;
     color: rgb(239, 79, 95);
     cursor: pointer;
+    font-weight: bold;
 }
 
 @media all and (max-width: 420px){

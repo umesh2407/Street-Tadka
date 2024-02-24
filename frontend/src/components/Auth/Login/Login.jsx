@@ -10,7 +10,12 @@ import loginCss from './Login.module.css';
 import EnterOTP from '../../Auth/EnterOTP/EnterOTP'
 
 let Login = ({ setAuth, setLoggedIn }) => {
-    const [phone, setPhone] = useState();
+    const [email, setEmail] = useState();
+    const isValidEmail = (email) => {
+        // Regular expression for validating email format
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    };
 
     let [otpModal, setOTPModal] = useState(false)
 
@@ -23,10 +28,11 @@ let Login = ({ setAuth, setLoggedIn }) => {
                 </span>
             </div>
             <div className={loginCss.lgBox}>
-                <input className={loginCss.phoneInp} type="tel" placeholder='Phone number ...' onChange={(e) => setPhone(e.target.value)} />
-                <button  className={phone?.length === 10 ? [loginCss.btn, loginCss.Sbtn].join(" ") : loginCss.btn} onClick={()=> phone?.length === 10 ? setOTPModal(true) : ""}>Send OTP</button>
+                <input className={loginCss.emailInp} type="email" placeholder='Email ...' onChange={(e) => setEmail(e.target.value)} />
+                {/* <button  className={email?.length === 10 ? [loginCss.btn, loginCss.Sbtn].join(" ") : loginCss.btn} onClick={()=> email?.length === 10 ? setOTPModal(true) : ""}>Send OTP</button> */}
+                <button className={isValidEmail(email) ? [loginCss.btn, loginCss.Sbtn].join(" ") : loginCss.btn} onClick={() => isValidEmail(email) ? setOTPModal(true) : ""}>Send OTP</button>
             </div>
-            <div className={loginCss.orBreak}><span className={loginCss.orBreakText}>or</span></div>
+            {/* <div className={loginCss.orBreak}><span className={loginCss.orBreakText}>or</span></div>
             <div className={loginCss.socialSignupBox}>
                 <img className={loginCss.icon} src={mailLogo} alt="email signup" />
                 Continue with Email
@@ -34,7 +40,7 @@ let Login = ({ setAuth, setLoggedIn }) => {
             <div className={loginCss.socialSignupBox}>
                 <img className={loginCss.icon} src={gLogo} alt="google signup" />
                 Continue with Google
-            </div>
+            </div> */}
             <hr className={loginCss.break} />
             <div className={loginCss.newToZomato}>New to Zomato? <div className={loginCss.createAcc} onClick={() => setAuth({ closed: false, login: false, signup: true })}>Create Account</div></div>
         </div>
