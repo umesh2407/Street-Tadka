@@ -66,7 +66,7 @@ let Signup = ({ setAuth }) => {
                 <div className={signupCss.newToZomato}>Already have an account? <div className={signupCss.createAcc} onClick={() => setAuth({ closed: false, login: true, signup: false })} >Log in</div></div>
             </div>
         </div>
-    );
+    )
     return createPortal(loginDiv, document.getElementById('modal'));
 }
 

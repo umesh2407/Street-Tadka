@@ -25,6 +25,7 @@ let MobileNavbar = ({ toogleMenu, setToggleMenu }) => {
         <div className={css.navbar}>
             <Link to='/add-restaurant' className={css.menuItem} >Add restuarant</Link>
             <div className={css.menuItem} onClick={() => setAuth({ closed: false, login: true, signup: false })}>Log in</div>
+              {/* <div className={css.menuItem}><Link to='/login' className={css.menuItemLinkTxt}>Log in</Link></div> */}
             <div className={css.menuItem} onClick={() => setAuth({ closed: false, login: false, signup: true })}>Sign up</div>
         </div>
     </div>
