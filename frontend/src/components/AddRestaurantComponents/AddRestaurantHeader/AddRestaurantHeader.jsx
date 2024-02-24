@@ -16,11 +16,11 @@ let AddRestaurantHeader = () => {
         <div className={css.bannerInner}>
             <img src={banner} alt="banner" className={css.bannerImg} />
             <div className={css.bannerTxt}>
-                <div className={css.title}>Register your restaurant on Zomato</div>
+                <div className={css.title}>Register Vendor on Street Tadka</div>
                 <div className={css.tag}>for free and get more customers!</div>
                 <div className={css.btns}>
-                    <Link to='/' className={css.btn}>Register your restaurant</Link>
-                    <Link to='/' className={css.btn}>Restaurant already listed? Claim now</Link>
+                <Link to='/' className={css.btn}>Login</Link>
+                <Link to='/' className={css.btn}>Register</Link>
                 </div>
             </div>
         </div>
