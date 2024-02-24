@@ -112,29 +112,29 @@ const Login = ({ setAuth, setLoggedIn }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        try {
-            const res = await axios.post('http://localhost:5000/api/login', { email });
-            toast.success('OTP sent successfully!', { autoClose: 5000 });
-            setOTPModal(true); // Open OTP modal after sending OTP
-        } catch (error) {
-            toast.error('Failed to send OTP!', { autoClose: 5000 });
-        }
+        // try {
+        //     const res = await axios.post('http://localhost:5000/api/login', { email });
+        //     toast.success('OTP sent successfully!', { autoClose: 5000 });
+        //     setOTPModal(true); // Open OTP modal after sending OTP
+        // } catch (error) {
+        //     toast.error('Failed to send OTP!', { autoClose: 5000 });
+        // }
     };
 
-    const verifyOTP = async () => {
-        try {
-            const response = await axios.post('http://localhost:5000/api/verify', { email, otp });
-            if (response.data.success) {
-                setLoggedIn(true);
-                setAuth(false);
-                localStorage.setItem('auth', true);
-            } else {
-                toast.error('Invalid OTP!', { autoClose: 5000 });
-            }
-        } catch (error) {
-            toast.error('Failed to verify OTP!', { autoClose: 5000 });
-        }
-    };
+    // const verifyOTP = async () => {
+    //     try {
+    //         const response = await axios.post('http://localhost:5000/api/verify', { email, otp });
+    //         if (response.data.success) {
+    //             setLoggedIn(true);
+    //             setAuth(false);
+    //             localStorage.setItem('auth', true);
+    //         } else {
+    //             toast.error('Invalid OTP!', { autoClose: 5000 });
+    //         }
+    //     } catch (error) {
+    //         toast.error('Failed to verify OTP!', { autoClose: 5000 });
+    //     }
+    // };
 
     return (
         <>
