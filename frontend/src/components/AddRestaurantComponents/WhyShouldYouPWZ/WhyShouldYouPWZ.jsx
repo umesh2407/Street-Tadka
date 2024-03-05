@@ -9,12 +9,12 @@ import css from './WhyShouldYouPWZ.module.css';
 let WhyShouldYouPWZ = () => {
     return <div className={css.outerDiv}>
         <div className={css.innerDiv}>
-            <div className={css.title}>Why should you partner with Tomato?</div>
-            <div className={css.tagLine}>Tomato enables you to get 60% more revenue, 10x new customers and boost your brand visibility by providing insights to improve your business.</div>
+            <div className={css.title}>Why should you partner with Street Tadka?</div>
+            <div className={css.tagLine}>Street Tadka enables you to get 40% more revenue, 10x new customers and boost your brand visibility by providing insights to improve your business.</div>
             <div className={css.cards}>
-                <Card4 imgSrc={globIcon} title="500+ cities" tagLine="in India" />
-                <Card4 imgSrc={calenderIcon} title="2.5 lakhs+" tagLine="restaurant listings" />
-                <Card4 imgSrc={restaurantIcon} title="4 crore+" tagLine="monthly orders" />
+                <Card4 imgSrc={globIcon} title="20+ cities" tagLine="in Gujarat" />
+                <Card4 imgSrc={calenderIcon} title="2k+" tagLine="restaurant listings" />
+                <Card4 imgSrc={restaurantIcon} title="2 lakh+" tagLine="monthly orders" />
             </div>
         </div>
     </div>

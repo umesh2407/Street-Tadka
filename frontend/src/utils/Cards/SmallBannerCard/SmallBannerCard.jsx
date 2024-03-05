@@ -10,7 +10,7 @@ let SmallBannerCard = () => {
                 <img className={css.img} src={SmallBanner} alt="banner" />
             </div>
             <div className={css.textBox}>
-                <div className={css.title}>Start your journey with Tomato</div>
+                <div className={css.title}>Start your journey with Street Tadka</div>
                 <div className={css.tag}>Create your restaurant page and register for online ordering</div>
                 <button className={css.btn}>
                     <span className={css.btnTitle}>Start now</span>

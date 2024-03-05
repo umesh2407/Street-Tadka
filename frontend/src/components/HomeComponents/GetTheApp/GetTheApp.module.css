@@ -101,7 +101,7 @@
 }
 
 .btn {
-    background-color: var(--bg-redish1);
+    background-color: rgb(38, 38, 233);
     border: none;
     padding: 10px 20px;
     color: var(--color-white);
@@ -109,6 +109,11 @@
     font-weight: 500;
     border-radius: 5px;
     cursor: pointer;
+    transition: 0.3s linear;
+}
+
+.btn:hover{
+    background-color: rgb(58, 58, 236);
 }
 
 .btn2 {
