@@ -1,4 +1,4 @@
-import User from "../models/userSchema.js";
+import userSchema from "../models/userSchema.js";
 import { comparePassword, hashPassword } from "../helper/authhelper.js";
 import nodemailer from "nodemailer";
 import JWT from "jsonwebtoken";
@@ -12,7 +12,7 @@ export const registerController = async (req, res) => {
         }
        
         //check user
-        const existingUser = await User.findOne({ email });
+        const existingUser = await userSchema.findOne({ email });
         //existing user
         if (existingUser) {
             return res.status(400).json({
@@ -24,7 +24,7 @@ export const registerController = async (req, res) => {
         //register user
         const hashedPassword = await hashPassword(password);
         //save
-        const user = await new User({
+        const user = await new userSchema({
             fullName,
             email,
          phone,
@@ -217,7 +217,7 @@ export const userOtpSend = async (req, res) => {
     }
 
     try {
-        const user = await User.findOne({ email });
+        const user = await userSchema.findOne({ email });
 
         if (!user) {
             return res.status(400).json({ error: "This User Does Not Exist" });
@@ -229,7 +229,7 @@ export const userOtpSend = async (req, res) => {
         if (userOtp) {
             userOtp.otp = OTP;
         } else {
-            userOtp = new UserOTP({ email, otp: OTP });
+            userOtp = new userotp({ email, otp: OTP });
         }
 
         await userOtp.save();
@@ -278,7 +278,7 @@ export const userLogin = async (req, res) => {
             return res.status(400).json({ error: "Invalid OTP" });
         }
 
-        const user = await User.findOne({ email });
+        const user = await userSchema.findOne({ email });
 
         if (!user) {
             return res.status(400).json({ error: "This User Does Not Exist" });
