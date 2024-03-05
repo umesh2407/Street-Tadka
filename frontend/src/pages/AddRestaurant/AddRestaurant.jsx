@@ -13,8 +13,8 @@ let AddRestaurant = () => {
     return <div>
         <AddRestaurantHeader />
         <WhyShouldYouPWZ />
-        <HowItWorks />
-        <SearchListedRestaurant />
+        {/* <HowItWorks /> */}
+        {/* <SearchListedRestaurant /> */}
         <SmallBannerCard />
         <FrequentlyAskedQues />
         <AddRestaurantSec />
