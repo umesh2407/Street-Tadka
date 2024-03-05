@@ -14,39 +14,47 @@ let Footer = () => {
     return <div className={footerCss.footer}>
         <div className={footerCss.innerFooter}>
             <div className={footerCss.sec1}>
-                <div className={footerCss.logoBox}>Tomato</div>
+                <div className={footerCss.logoBox}>Street Tadka</div>
                 <div className={footerCss.filters}>
                     <div className={footerCss.filterBox}> <span>
                         <img className={footerCss.icon} src={indianFlag} alt="india flag" />
                     </span>
                         <span>India</span>
-                        <span className={footerCss.arrow} >&#709;</span></div>
-                    <div className={footerCss.filterBox}><span>🌐<span></span> English</span> <span className={footerCss.arrow} >&#709;</span></div>
+                        </div>
+                    <div className={footerCss.filterBox}>
+                    <select className={footerCss.lang_ctrl}>
+                    <option><span>🌐<span></span> English</span> </option>
+                    <option><span> Hindi</span> </option>
+                    <option><span> Gujarati</span> </option>
+                    <option><span> Bhojpuri</span> </option>
+                    
+                    </select>
+                    </div>
+                    
                 </div>
             </div>
             <div className={footerCss.sec2}>
                 <div className={[footerCss.box1, footerCss.box].join(' ')}>
-                    <div className={footerCss.boxTtl}>ABOUT TOMATO</div>
-                    <a href="" className={footerCss.boxOpt}>Who We Are</a>
+                    <div className={footerCss.boxTtl}>About Street Tadka</div>
+                    <a href="" className={footerCss.boxOpt}>Our Team</a>
                     <a href="" className={footerCss.boxOpt}>Blog</a>
                     <a href="" className={footerCss.boxOpt}>Work With Us</a>
-                    <a href="" className={footerCss.boxOpt}>Investor Relations</a>
-                    <a href="" className={footerCss.boxOpt}>Report Fraud</a>
+                    
                 </div>
-                <div className={[footerCss.box2, footerCss.box].join(' ')}>
+                {/* <div className={[footerCss.box2, footerCss.box].join(' ')}>
                     <div className={footerCss.boxTtl}>TOMAVERSE</div>
                     <a href="" className={footerCss.boxOpt}>Tomato</a>
                     <a href="" className={footerCss.boxOpt}>Feeding India</a>
                     <a href="" className={footerCss.boxOpt}>Hyperpure</a>
                     <a href="" className={footerCss.boxOpt}>Tomaland</a>
-                </div>
+                </div> */}
                 <div className={[footerCss.box3, footerCss.box].join(' ')}>
                     <div className={footerCss.boxTtl}>FOR RESTAURANTS</div>
                     <a href="" className={footerCss.boxOpt}>Partner With Us</a>
                     <a href="" className={footerCss.boxOpt}>Apps For You</a>
 
-                    <div className={footerCss.boxTtl}>FOR ENTERPRISES</div>
-                    <a href="" className={footerCss.boxOpt}>Tomato For Work</a>
+                    {/* <div className={footerCss.boxTtl}>FOR ENTERPRISES</div>
+                    <a href="" className={footerCss.boxOpt}>Tomato For Work</a> */}
                 </div>
                 <div className={[footerCss.box4, footerCss.box].join(' ')}>
                     <div className={footerCss.boxTtl}>LEARN MORE</div>

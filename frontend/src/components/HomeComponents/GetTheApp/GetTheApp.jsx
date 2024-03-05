@@ -17,7 +17,7 @@ let GetTheApp = () => {
                 <img className={css.mobileImg} src={mobileImg} alt="mobile img" />
             </div>
             <div className={css.rightSec}>
-                <div className={css.title}>Get the Tomato App</div>
+                <div className={css.title}>Get the <span className={css.titleName}>Street Tadka</span> App</div>
                 <div className={css.tag}>We will send you a link, open it on your phone to download the app</div>
                 <div className={css.inputBoxes}>
                     <div className={css.radiosBtns}>

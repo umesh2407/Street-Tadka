@@ -31,6 +31,10 @@
     font-weight: 450;
 }
 
+.titleName{
+    font-weight: bold;
+}
+
 .tag {
     margin: 10px 0;
     font-weight: 350;
