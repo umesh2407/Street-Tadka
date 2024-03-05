@@ -5,7 +5,7 @@ import closeBtn from '/images/closeBtn.jpg';
 import {useNavigate} from 'react-router-dom'
 import signupCss from './Signup.module.css';
 
-let Signup = ({ setAuth }) => {
+let Signup = ({setAuth}) => {
 
     const navigate=useNavigate();
     const [formData, setFormData] = useState({
