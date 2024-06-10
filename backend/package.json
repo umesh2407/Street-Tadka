@@ -4,7 +4,8 @@
   "description": "",
   "main": "./src/index.ts",
   "scripts": {
-    "dev": "concurrently \"nodemon\" \"npm run stripe\"",
+    "dev":"concurrently \"npm run start-server\" \"npm run stripe\"",
+    "start-server": "nodemon ./src/index.ts",
     "stripe": "stripe listen --forward-to localhost:7000/api/order/checkout/webhook",
     "build": "npm install && npx tsc",
     "start": "node dist/index.js"
